@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="styles/heart.png">
+    <link rel="stylesheet" href="styles/styl.css">
+    <title>Love you niko</title>
+</head>
+<body>
+    <div id="main">
+        <img src="styles/cat-ezgif.com-loop-count.gif" alt="kotek">
+        <h1 id="tekst">Czy zostaniesz moją walentynka?</h1>
+        <div id="buttons">
+            <button class="przycisk" id="tak">Tak</button>
+            <button class="przycisk" id="nie" onclick="nie()">Nie</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function nie(){
+        const btn = document.querySelector("#nie");
+        btn.innerHTML = 'Tak';
+        btn.id = 'tak';
+
+        btn.addEventListener("click", function() {
+            location.replace("happy.html");
+        });
+
+        alert("Chyba ci się coś źle kliknęło :3");
+    }
+
+    document.querySelector("#tak").addEventListener("click", function() {
+        location.replace("happy.html");
+    });
+</script>
